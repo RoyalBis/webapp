@@ -1,0 +1,117 @@
+/* ===============================COMMON CSS =================================*/
+/* CSS FOR THE BODY */
+/* I am here to debug css!!! */
+	/** {
+	  border: 1px solid red !important;
+	}*/
+
+	body
+	{
+		margin-left: 10%;
+		margin-right: 10%;
+		font-family: sans-serif;
+	}
+/* END CSS FOR THE BODY */
+
+/* CSS FOR THE HEADER */
+
+	header .logo /*The logo class for all items in the logo-container*/
+	{
+		display: inline-block;
+		font-family: arial;
+		font-size: 30px;
+		font-weight: 800;
+	}
+
+	img.logo /*The actual logo image*/
+	{
+		vertical-align: middle;
+		padding: 1em;
+	}
+
+	h1.logo
+	{
+		color: white;
+		background-color: black;
+		padding: .5em;
+		text-transform: uppercase;
+		margin-bottom: 1em;
+	}
+
+	/* CSS FOR THE NAV BAR */
+		nav
+		{
+			height: 3em;
+			margin-left: 0px;
+			margin-right: 0px;
+			width: 100%;
+			text-transform: uppercase;
+			display: flex;
+		}
+
+		nav div
+		{
+			margin-top: .5em;
+			height: 2em;
+			vertical-align: middle;
+		}
+
+
+		nav > a:last-child > div /*don't want a border-right on the last div*/
+		{
+			border-right: none;
+		}
+
+		nav > a
+		{
+			line-height: 2em;
+			text-decoration: none;
+			font-size: 14px;
+			font-family: arial;
+			font-weight: 800;
+			color: white;
+			flex-grow: 1;
+			background-color: #ff7300;
+			border-bottom: 3px solid #ff7300;
+			transition: color, background-color .25s ease-in;
+		}
+
+		nav > a:hover
+		{
+			background-color: white;
+			color: black;
+		}
+
+		#current  /*The specific style for the currently selected page*/
+		{
+			color: rgb(40, 40, 40);
+			flex-grow: 2;
+			background-color: white;
+		}
+	/* END CSS FOR THE NAV BAR */
+/* END CSS OF HEADER */
+
+/* CSS FOR THE FOOTER*/
+	footer p
+	{
+		margin-left: 1em;
+		font-weight: 800;
+		float: left;
+	}
+
+	footer img.logo
+	{
+		height: 50px;
+		float: right;
+		vertical-align: middle;
+	}
+
+	footer
+	{
+		margin-top: 1%;
+		height: 80px;
+		padding-top: 10px;
+		border-top: 1px solid black;
+	}
+/* END CSS FOR THE FOOTER*/
+/*----------------------------------------------------------------------------*/

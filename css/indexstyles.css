@@ -1,0 +1,108 @@
+/* =========================INDEX.HTML Pictures CSS ==========================*/
+/*CSS FOR THE PICTURES SECTION*/
+	#pictures /*pictures section container*/
+	{
+		background-color: black;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom:  3px solid #ff7300;
+
+	}
+
+/*the divs of the pictures section, these contain the picutes and must 'flex' to
+ accommodate a varying number of pictures and window sizes*/
+	.pic {
+		height: 140px;
+		flex: 1;
+		display: inline-flex;
+		margin: 0.5em;
+		background-size: cover;
+		background-repeat: no-repeat;
+    background-position: 50% 50%;
+				/*max-width: 33%;*/
+	}
+
+/*These load up the right pictures as background images*/
+#pic1 {background-image: url("../images/TravelP1.jpg");}
+#pic2 {background-image: url("../images/TravelP2.jpg");}
+#pic3 {background-image: url("../images/TravelP3.jpg");}
+#pic4 {background-image: url("../images/TravelP4.jpg");}
+#pic5 {background-image: url("../images/TravelP5.jpg");}
+#pic6 {background-image: url("../images/TravelP6.jpg");}
+/* END CSS FOR THE PICTURES---------------------------------------------------*/
+
+/* ==========================INDEX.HTML packages CSS =========================*/
+#packages {
+	background-image: url("../images/whitebg.png");
+	margin-top: 1em;
+	border-top: 1px solid #ff7300;
+	border-bottom: 1px solid #ff7300;
+	max-width: 100%;
+}
+
+#packages p {
+	margin-top: .5em;
+	margin-bottom: 2em;
+	text-align:center;
+	font-weight: 900;
+	font-size: 22px;
+	letter-spacing: .1em;
+}
+
+#vacpackages {
+	margin-top: 2%;
+	height: 200px;
+	width: 100%;
+	display:flex;
+	flex-wrap: wrap;
+	flex-flow: row;
+	flex-direction: row;
+	align-items: center;
+}
+
+#vacpackages > div {
+	position: relative;
+	top: 0%;
+	height: 90%;
+	width: 20%;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 2%;
+	overflow: hidden;
+	flex-basis: 100px;
+	display: flex;
+	flex: 1;
+	background-color: black;
+	border-top: 1em solid #ff7300;
+	border-bottom: 1em solid #ff7300;
+	border-radius: .25em;
+	align-content: space-around;
+	align-items: center;
+  cursor: pointer;
+}
+
+#vacpackages > div > img {
+	height: 100%;
+	width: auto;
+	position: absolute;
+	top: -9999px;
+	bottom: -9999px;
+	left: -9999px;
+	right: -9999px;
+	margin: auto;
+	min-width:100%;
+}
+
+#vacpackages > div > p {
+	flex: 1;
+	z-index: -1;
+	color: white;
+	font-weight: bold;
+	margin-left: 5%;
+	margin-right: 5%;
+	word-wrap: break-word;
+  text-decoration: none;
+  width: 100%;
+}
+/*----------------------------------------------------------------------------*/

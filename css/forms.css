@@ -1,0 +1,136 @@
+/* I am here to debug css!!! */
+/** {
+  border: 1px solid red !important;
+}*/
+
+
+label
+{
+    width: 8em;
+    min-width: 8em;
+    max-width: 8em;
+    text-align: right;
+    margin-right: 1em;
+    font-weight: 600;
+    color: #404040;
+}
+
+.input-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.input
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    position: relative;
+}
+
+.inner-input
+{
+    margin-top: .5em;
+    margin-bottom: .5em;
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+}
+
+select, textarea, input, .bumper
+{
+    flex-grow: 1;
+    background-color: rgb(246, 246, 246);
+    max-width: 100%;
+}
+
+.bumper
+{
+    visibility: hidden;
+    background-color: transparent;
+}
+
+#buttons > input
+{
+    flex-grow: 0;
+    margin-left: 1em;
+    height: 4em;
+    border-radius: 1em;
+    background-color: #ff7300;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 3em;
+    padding-right: 3em;
+    cursor: auto;
+    transition: background-color, color .1s;
+}
+
+#buttons > input:hover {
+  background-color: White;
+  color: black;
+}
+
+#spam {
+  justify-content: flex-end;
+}
+
+[name="spam"]
+{
+    flex-grow: 0;
+    min-width: 2em;
+    margin-left: 1em;
+}
+
+#gender
+{
+    height: 1em;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+#genders
+{
+    margin-top: 0px;
+}
+
+#genders label
+{
+    margin-right: 0px;
+    font-weight: normal;
+}
+
+[type="radio"]
+{
+    margin-right: 2em;
+}
+
+select:focus, textarea:focus, input:focus
+{
+    border-color: transparent;
+    background-color: transparent;
+}
+
+ form div > p
+{
+  position: absolute;
+  top: 1.5em;
+  left: 9em;;
+  background-color:rgba(0, 0, 0, 0.75);
+  color: white;
+  z-index: 2;
+  border: 2px black solid;
+  padding: 1em;
+}
+
+#errors
+{
+  color: red;
+  font-weight: 800;
+  list-style: circle;
+  margin: 0 0 2em 2em;
+}
