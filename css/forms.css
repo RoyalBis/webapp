@@ -1,8 +1,16 @@
+/*******************************************************************************
+Title: 			 Travel Experts Web App - CSS Forms
+Author:		   Royal Bissell
+Date: 			 2015-11-02
+Description: CSS file to style forms. This file uses Flexboxes to handle exapanding
+             fields in order to create responsive design. Some styling is handled
+             dynamically by form.js
+*******************************************************************************/
+
 /* I am here to debug css!!! */
 /** {
   border: 1px solid red !important;
 }*/
-
 
 label
 {

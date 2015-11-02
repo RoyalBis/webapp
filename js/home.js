@@ -1,3 +1,11 @@
+/*******************************************************************************
+Title: 			 Travel Experts Web App - Home.JS
+Author: 		 Royal Bissell
+Date: 			 2015-11-02
+Description: JavaScript for the Home Page. Handles the Package object creation
+             and the display the package images, descriptions, names, and
+             webpage link.
+*******************************************************************************/
 
 var vacNames =  [
                   "Vacation Package #1",

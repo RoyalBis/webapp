@@ -1,3 +1,11 @@
+/*******************************************************************************
+Title: 			 Travel Experts Web App - Form.JS
+Author: 		 Royal Bissell
+Date: 			 2015-11-02
+Description: JavaScript for the Registration Form. Handles onfocus tooltips,
+             data validation, and a Regex for Postal Code entry.
+*******************************************************************************/
+
 /*
 This function is called when the user clicks submit or reset.
 Returns: false to interrupt the actions or completes.
@@ -67,7 +75,6 @@ function objConcat() {
   }
   return output;
 }
-
 
 function valPostCode(sender) {
   var canPostRe = /^([A-Z]\d[A-Z](\s|-)?\d[A-Z]\d)$/;

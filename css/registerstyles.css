@@ -1,4 +1,10 @@
-
+/*******************************************************************************
+Title: 			 Travel Experts Web App - CSS Registration Page
+Author:		   Royal Bissell
+Date: 			 2015-11-02
+Description: CSS file to style the Registration Page. This file does not deal
+						 with the form elements.
+*******************************************************************************/
 /* ============================REGISTER.HTML CSS =============================*/
 #reg-form
 { margin: 2% 0; }
