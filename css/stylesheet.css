@@ -12,17 +12,13 @@ Description: CSS file to style forms. Styles the common elements of the web app.
 	  border: 1px solid red !important;
 	}*/
 
+	/*create a margin on both sides of the page*/
 	body
-	{
-		margin-left: 10%;
-		margin-right: 10%;
-		font-family: sans-serif;
-	}
-/* END CSS FOR THE BODY */
+	{ margin-left: 10%; margin-right: 10%; font-family: sans-serif; }
 
 /* CSS FOR THE HEADER */
-
-	header .logo /*The logo class for all items in the logo-container*/
+	/*The logo class for all items in the logo-container*/
+	header .logo
 	{
 		display: inline-block;
 		font-family: arial;
@@ -30,11 +26,8 @@ Description: CSS file to style forms. Styles the common elements of the web app.
 		font-weight: 800;
 	}
 
-	img.logo /*The actual logo image*/
-	{
-		vertical-align: middle;
-		padding: 1em;
-	}
+	/*The actual logo image*/
+	img.logo { vertical-align: middle; padding: 1em; }
 
 	h1.logo
 	{
@@ -45,57 +38,50 @@ Description: CSS file to style forms. Styles the common elements of the web app.
 		margin-bottom: 1em;
 	}
 
-	/* CSS FOR THE NAV BAR */
-		nav
-		{
-			height: 3em;
-			margin-left: 0px;
-			margin-right: 0px;
-			width: 100%;
-			text-transform: uppercase;
-			display: flex;
-		}
+/* CSS FOR THE NAV BAR */
+	nav
+	{
+		height: 3em;
+		margin-left: 0px;
+		margin-right: 0px;
+		width: 100%;
+		text-transform: uppercase;
+		display: flex;
+	}
 
-		nav div
-		{
-			margin-top: .5em;
-			height: 2em;
-			vertical-align: middle;
-		}
+	nav div
+	{ margin-top: .5em; height: 2em; vertical-align: middle; }
 
 
-		nav > a:last-child > div /*don't want a border-right on the last div*/
-		{
-			border-right: none;
-		}
+	/*don't want a border-right on the last div*/
+	nav > a:last-child > div
+	{ border-right: none; }
 
-		nav > a
-		{
-			line-height: 2em;
-			text-decoration: none;
-			font-size: 14px;
-			font-family: arial;
-			font-weight: 800;
-			color: white;
-			flex-grow: 1;
-			background-color: #ff7300;
-			border-bottom: 3px solid #ff7300;
-			transition: color, background-color .25s ease-in;
-		}
+	nav > a
+	{
+		line-height: 2em;
+		text-decoration: none;
+		font-size: 14px;
+		font-family: arial;
+		font-weight: 800;
+		color: white;
+		flex-grow: 1;
+		background-color: #ff7300;
+		border-bottom: 3px solid #ff7300;
+		transition: color, background-color .25s ease-in;
+	}
 
-		nav > a:hover
-		{
-			background-color: white;
-			color: black;
-		}
+	/*hover transition effects*/
+	nav > a:hover
+	{
+		background-color: white;
+		color: black;
+	}
 
-		#current  /*The specific style for the currently selected page*/
-		{
-			color: rgb(40, 40, 40);
-			flex-grow: 2;
-			background-color: white;
-		}
-	/* END CSS FOR THE NAV BAR */
+	/*The specific style for the currently selected page (same as hover)*/
+	#current
+	{ color: rgb(40, 40, 40); flex-grow: 2; background-color: white; }
+/* END CSS FOR THE NAV BAR */
 /* END CSS OF HEADER */
 
 /* CSS FOR THE FOOTER*/

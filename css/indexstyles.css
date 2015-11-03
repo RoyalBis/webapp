@@ -8,30 +8,30 @@ Description: CSS file to style the home page (index.html). This file sets the
 *******************************************************************************/
 /* =========================INDEX.HTML Pictures CSS ==========================*/
 /*CSS FOR THE PICTURES SECTION*/
-	#pictures /*pictures section container*/
-	{
-		background-color: black;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-bottom:  3px solid #ff7300;
+#pictures /*pictures section container*/
+{
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom:  3px solid #ff7300;
 
-	}
+}
 
 /*the divs of the pictures section, these contain the picutes and must 'flex' to
- accommodate a varying number of pictures and window sizes*/
-	.pic {
-		height: 140px;
-		flex: 1;
-		display: inline-flex;
-		margin: 0.5em;
-		background-size: cover;
-		background-repeat: no-repeat;
-    background-position: 50% 50%;
-				/*max-width: 33%;*/
-	}
+accommodate a varying number of pictures and window sizes*/
+.pic
+{
+	height: 140px;
+	flex: 1;
+	display: inline-flex;
+	margin: 0.5em;
+	background-size: cover;
+	background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
 
-/*These load up the right pictures as background images*/
+/*These load up the right pictures as background images; easier to center!*/
 #pic1 {background-image: url("../images/TravelP1.jpg");}
 #pic2 {background-image: url("../images/TravelP2.jpg");}
 #pic3 {background-image: url("../images/TravelP3.jpg");}
@@ -49,6 +49,7 @@ Description: CSS file to style the home page (index.html). This file sets the
 	max-width: 100%;
 }
 
+/*just the section heading*/
 #packages p {
 	margin-top: .5em;
 	margin-bottom: 2em;
@@ -58,6 +59,7 @@ Description: CSS file to style the home page (index.html). This file sets the
 	letter-spacing: .1em;
 }
 
+/* This is the flex container for all the divs*/
 #vacpackages {
 	margin-top: 2%;
 	height: 200px;
@@ -69,6 +71,7 @@ Description: CSS file to style the home page (index.html). This file sets the
 	align-items: center;
 }
 
+/* the divs that hold the packages images, text and click() event. */
 #vacpackages > div {
 	position: relative;
 	top: 0%;
@@ -90,6 +93,7 @@ Description: CSS file to style the home page (index.html). This file sets the
   cursor: pointer;
 }
 
+/*much of this makes sure the pictures are centered in the divs*/
 #vacpackages > div > img {
 	height: 100%;
 	width: auto;
@@ -102,6 +106,7 @@ Description: CSS file to style the home page (index.html). This file sets the
 	min-width:100%;
 }
 
+/*text on the packages; hidden until mouseover()*/
 #vacpackages > div > p {
 	flex: 1;
 	z-index: -1;
