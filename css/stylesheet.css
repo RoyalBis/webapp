@@ -41,16 +41,16 @@ Description: CSS file to style forms. Styles the common elements of the web app.
 /* CSS FOR THE NAV BAR */
 	nav
 	{
-		height: 3em;
 		margin-left: 0px;
 		margin-right: 0px;
 		width: 100%;
 		text-transform: uppercase;
-		display: flex;
+		display: inline-flex;
+		flex-wrap: wrap;
 	}
 
 	nav div
-	{ margin-top: .5em; height: 2em; vertical-align: middle; }
+	{ height: 3em; margin-top: .5em; height: 2em; vertical-align: middle; min-width: 10em;}
 
 
 	/*don't want a border-right on the last div*/

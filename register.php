@@ -3,16 +3,15 @@ Title: 			 Travel Experts Web App - Registration Page & Form
 Author: 		 Royal Bissell
 Date: 			 2015-11-02
 Description: Registration Page for Travel Experts. Contains a registration form
-						 and data validation. Shares Header and Footer with Contacts.html and
-						 Register.html.
-
-Methods:		The form fields use title and pattern attributes.
-						Title attributes provide a hover effect for fields, onfocus() tooltips
-						are still neccessary; touch input devices do not hover!
-						Pattern attributes perform a regex on input at submission and if they
-						fail will display the message = title attribute to the user as an error
-						message. (postal code and birthdate rely on javascript as a way of
-						exploring different validation methods)
+						 and data validation. Shares Header and Footer with index.php and
+						 contact.php.
+Methods:		 The form fields use title and pattern attributes.
+						 Title attributes provide a hover effect for fields, onfocus() tooltips
+						 are still neccessary; touch input devices do not hover!
+						 Pattern attributes perform a regex on input at submission and if they
+						 fail will display the message = title attribute to the user as an error
+						 message. (postal code and birthdate rely on javascript as a way of
+						 exploring different validation methods)
 ------------------------------------------------------------------------------->
 
 <!DOCTYPE html>
@@ -33,14 +32,17 @@ Methods:		The form fields use title and pattern attributes.
 			<h1 class="logo">Welcome to Travel Experts</h1>
 		</div>
 		<nav>
-			<a href="index.html">
+			<a href="index.php">
 				<div>Home</div>
 			</a>
-			<a href="contact.html">
+			<a href="contact.php">
 				<div>Contact Us</Div>
 			</a>
-			<a id="current" href="register.html">
+			<a id="current" href="register.php">
 				<div>Registration</div>
+			</a>
+			<a href="links.php">
+				<div>Links</div>
 			</a>
 		</nav>
 	</header>

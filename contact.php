@@ -4,8 +4,8 @@ Author: 		 Royal Bissell
 Date: 			 2015-11-02
 Description: Contact Page for Travel Experts. Contains the Contact info for Travel
 						 Experts and their Agents, latter this will be populated by a
-						 database. Shares Header and Footer with Contacts.html and
-						 Register.html.
+						 database. Shares Header and Footer with index.php and
+						 register.php.
 ------------------------------------------------------------------------------->
 
 <!DOCTYPE html>
@@ -25,14 +25,17 @@ Description: Contact Page for Travel Experts. Contains the Contact info for Trav
 					<h1 class="logo">Welcome to Travel Experts</h1>
 				</div>
 				<nav>
-					<a href="index.html">
+					<a href="index.php">
 						<div>Home</div>
 					</a>
-					<a id="current" href="contact.html">
+					<a id="current" href="contact.php">
 						<div>Contact Us</Div>
 					</a>
-					<a href="register.html">
+					<a href="register.php">
 						<div>Registration</div>
+					</a>
+					<a href="links.php">
+						<div>Links</div>
 					</a>
 				</nav>
 			</header>
@@ -47,11 +50,8 @@ Description: Contact Page for Travel Experts. Contains the Contact info for Trav
 				</li>
 			</ul>
 		</main>
-		<footer>
-			<div class="logo">
-				<img class="logo" src="images/PirateBadge_100px.png"/>
-				<p>Copyright &copy by Travel Experts</p>
-			</div>
-		</footer>
+		<?php
+			include('footer.php');
+		 ?>
 	<body
 </html>

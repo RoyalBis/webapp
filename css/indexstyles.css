@@ -10,22 +10,22 @@ Description: CSS file to style the home page (index.html). This file sets the
 /*CSS FOR THE PICTURES SECTION*/
 #pictures /*pictures section container*/
 {
-	background-color: black;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 	align-items: center;
+	background-color: black;
 	border-bottom:  3px solid #ff7300;
-
 }
 
 /*the divs of the pictures section, these contain the picutes and must 'flex' to
 accommodate a varying number of pictures and window sizes*/
-.pic
-{
+.pic {
 	height: 140px;
-	flex: 1;
-	display: inline-flex;
+	min-width: 140px;
+	flex: 1 1;
 	margin: 0.5em;
+	border-radius: 1em
 	background-size: cover;
 	background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -42,15 +42,18 @@ accommodate a varying number of pictures and window sizes*/
 
 /* ==========================INDEX.HTML packages CSS =========================*/
 #packages {
-	background-image: url("../images/whitebg.png");
+	/*background-image: url("../images/whitebg.png");*/
+	background-color: black;
 	margin-top: 1em;
 	border-top: 1px solid #ff7300;
 	border-bottom: 1px solid #ff7300;
 	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 /*just the section heading*/
-#packages p {
+#packages > p {
 	margin-top: .5em;
 	margin-bottom: 2em;
 	text-align:center;
@@ -62,12 +65,9 @@ accommodate a varying number of pictures and window sizes*/
 /* This is the flex container for all the divs*/
 #vacpackages {
 	margin-top: 2%;
-	height: 200px;
 	width: 100%;
-	display:flex;
+	display: flex;
 	flex-wrap: wrap;
-	flex-flow: row;
-	flex-direction: row;
 	align-items: center;
 }
 
@@ -75,15 +75,14 @@ accommodate a varying number of pictures and window sizes*/
 #vacpackages > div {
 	position: relative;
 	top: 0%;
-	height: 90%;
-	width: 20%;
+	min-width: 140px;
+	height: 140px;
 	margin-left: 2%;
 	margin-right: 2%;
 	margin-bottom: 2%;
 	overflow: hidden;
-	flex-basis: 100px;
 	display: flex;
-	flex: 1;
+	flex: 1 1;
 	background-color: black;
 	border-top: 1em solid #ff7300;
 	border-bottom: 1em solid #ff7300;
@@ -95,8 +94,6 @@ accommodate a varying number of pictures and window sizes*/
 
 /*much of this makes sure the pictures are centered in the divs*/
 #vacpackages > div > img {
-	height: 100%;
-	width: auto;
 	position: absolute;
 	top: -9999px;
 	bottom: -9999px;
@@ -105,6 +102,7 @@ accommodate a varying number of pictures and window sizes*/
 	margin: auto;
 	min-width:100%;
 }
+
 
 /*text on the packages; hidden until mouseover()*/
 #vacpackages > div > p {
@@ -119,3 +117,33 @@ accommodate a varying number of pictures and window sizes*/
   width: 100%;
 }
 /*----------------------------------------------------------------------------*/
+#greeting {
+	position: relative;
+	/*background-color: white;*/
+	height: auto;
+	width: 100%;
+	display: flex;
+}
+
+.tg-txt {
+	margin: 0.25em;
+	flex: 1 1;
+}
+
+.tg-graphic {
+	flex: 5 5;
+	margin: 0.25em;
+}
+
+h3 {
+	font-size: 20px;
+	font-weight: 900;
+	color: white;
+	line-height: 100%;
+}
+
+#greeting img {
+	left: 0;
+	width: 5em;
+	vertical-align: middle;
+}

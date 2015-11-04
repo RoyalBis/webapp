@@ -3,8 +3,8 @@ Title: 			 Travel Experts Web App - Home
 Author: 		 Royal Bissell
 Date: 			 2015-11-02
 Description: Home Page for Travel Experts. Contains pictures and a Featured
-						 Travel Packages section. Shares Header and Footer with Contacts.html
-						 and Register.html.
+						 Travel Packages section. Shares Header and Footer with contact.php
+						 and register.php.
 ------------------------------------------------------------------------------->
 
 <!DOCTYPE html>
@@ -29,14 +29,17 @@ Description: Home Page for Travel Experts. Contains pictures and a Featured
 			<h1 class="logo">Welcome to Travel Experts</h1>
 		</div>
 		<nav>
-			<a id="current" href="index.html">
+			<a id="current" href="index.php">
 				<div>Home</div>
 			</a>
-			<a href="contact.html">
+			<a href="contact.php">
 				<div>Contact Us</Div>
 			</a>
-			<a href="register.html">
+			<a href="register.php">
 				<div>Registration</div>
+			</a>
+			<a href="links.php">
+				<div>Links</div>
 			</a>
 		</nav>
 	</header>
@@ -60,8 +63,23 @@ Description: Home Page for Travel Experts. Contains pictures and a Featured
 			</section> <!-- END OF THE TRAVEL PICUTRES -->
 
 			<!--START OF THE PACKAGES SECTION (content is added dynamically onload()) -->
-			<section id="packages">
-				<p>Featured Vacation Packages</p>
+			<section id="packages" align="center">
+				<?php
+					date_default_timezone_set('Canada/Mountain');
+					print(date('H'));
+					if ( date('H') > 4 && date('H') < 12 )  {
+						$greeting = "Good Morning!";
+						$icon = "images/Morning.svg";
+					} elseif ( date('H') < 17 ) {
+						$greeting = "Good Afternoon!";
+						$icon = "images/Afternoon.svg";
+					} else {
+						$greeting = "Good Evening!";
+						$icon = "images/Evening.svg";
+					}
+					print ("<div id='greeting'><div class='tg-txt'><img src='$icon'/></div><div class='tg-graphic'><h3>$greeting<br/></h3></div></div>");
+				 ?>
+				<h3>Featured Vacation Packages</h3>
 				<div id="vacpackages">
 
 				</div>

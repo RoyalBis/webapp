@@ -65,13 +65,6 @@ select, textarea, input, .bumper
     max-width: 100%;
 }
 
-/*spaces to push flex fields to one side of the window*/
-.bumper
-{
-    visibility: hidden;
-    background-color: transparent;
-}
-
 /*buttons*/
 #buttons > input
 {

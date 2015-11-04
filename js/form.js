@@ -33,7 +33,7 @@ function formConfirm(sender) {
   if (!confirm("Are you sure you want to " + type + " the form?")) {
     return false;
   }
-  if (sender.type == submit) {
+  if (sender.type == "submit") {
     return formValidate(sender);
   }
 }
@@ -68,7 +68,8 @@ function formValidate(sender) {
 
 /*
 Function to create an array from on object that looks like an array (numbered)
-If only one item is added it will just create an array out of this object.
+If only one objectarray is added as a parameter it will just create an array out
+of this object.
 Input: (Object1[element1,element2,etc] , Object2[element1,element2,etc]*optional,
        etc[etc]*optional)
 Returns: the new array
