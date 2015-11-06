@@ -19,26 +19,14 @@ Description: Contact Page for Travel Experts. Contains the Contact info for Trav
 		<link rel="stylesheet" href="css/stylesheet.css"/>
 	</head>
 	<body>
-			<header align="center">
-				<div id="logo-container">
-					<img class="logo" src="images/PirateBadge_100px.png"/>
-					<h1 class="logo">Welcome to Travel Experts</h1>
-				</div>
-				<nav>
-					<a href="index.php">
-						<div>Home</div>
-					</a>
-					<a id="current" href="contact.php">
-						<div>Contact Us</Div>
-					</a>
-					<a href="register.php">
-						<div>Registration</div>
-					</a>
-					<a href="links.php">
-						<div>Links</div>
-					</a>
-				</nav>
-			</header>
+		<!-- START OF THE HEADER-->
+			<?php
+				include('header.php');
+			 ?>
+		<!-- END OF THE HEADER-->
+			<?php
+				include('menu.php');
+			 ?>
 		<main>
 			<h3>Contact Us</h3>
 			<ul>
@@ -53,5 +41,6 @@ Description: Contact Page for Travel Experts. Contains the Contact info for Trav
 		<?php
 			include('footer.php');
 		 ?>
+
 	<body
 </html>

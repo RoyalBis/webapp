@@ -44,27 +44,28 @@ accommodate a varying number of pictures and window sizes*/
 #packages {
 	/*background-image: url("../images/whitebg.png");*/
 	background-color: black;
-	margin-top: 1em;
-	border-top: 1px solid #ff7300;
-	border-bottom: 1px solid #ff7300;
 	max-width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 /*just the section heading*/
 #packages > p {
-	margin-top: .5em;
-	margin-bottom: 2em;
-	text-align:center;
+	display: block;
+	background-color: #ff7300;
+	align-self: center;
 	font-weight: 900;
-	font-size: 22px;
-	letter-spacing: .1em;
+	font-size: 24px;
+	letter-spacing: .2em;
+	color: white;
+	width: 100%;
+	line-height: 150%;
 }
 
 /* This is the flex container for all the divs*/
 #vacpackages {
-	margin-top: 2%;
+	margin-top: .5em;
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
@@ -77,9 +78,9 @@ accommodate a varying number of pictures and window sizes*/
 	top: 0%;
 	min-width: 140px;
 	height: 140px;
-	margin-left: 2%;
-	margin-right: 2%;
-	margin-bottom: 2%;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-bottom: 1%;
 	overflow: hidden;
 	display: flex;
 	flex: 1 1;
@@ -87,7 +88,7 @@ accommodate a varying number of pictures and window sizes*/
 	border-top: 1em solid #ff7300;
 	border-bottom: 1em solid #ff7300;
 	border-radius: .25em;
-	align-content: space-around;
+	align-content: center;
 	align-items: center;
   cursor: pointer;
 }
@@ -118,32 +119,18 @@ accommodate a varying number of pictures and window sizes*/
 }
 /*----------------------------------------------------------------------------*/
 #greeting {
-	position: relative;
-	/*background-color: white;*/
-	height: auto;
+	height: 100%;
 	width: 100%;
-	display: flex;
-}
-
-.tg-txt {
-	margin: 0.25em;
-	flex: 1 1;
-}
-
-.tg-graphic {
-	flex: 5 5;
-	margin: 0.25em;
+	background-color: black;
 }
 
 h3 {
-	font-size: 20px;
+	border-radius: 3em;
+	align-self: center;
 	font-weight: 900;
+	font-size: 24px;
+	letter-spacing: .2em;
 	color: white;
-	line-height: 100%;
-}
-
-#greeting img {
-	left: 0;
-	width: 5em;
-	vertical-align: middle;
+	width: 100%;
+	line-height: 300%;
 }

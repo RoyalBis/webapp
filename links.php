@@ -26,42 +26,40 @@
   <link rel="stylesheet" href="css/stylesheet.css"/>
   <link rel="stylesheet" href="css/linksstyle.css"/>
 
+  <?php
+    include('variables.php');
+   ?>
+
 </head>
 <body>
-  <header align="center">
-    <div id="logo-container">
-      <img class="logo" src="images/PirateBadge_100px.png"/>
-      <h1 class="logo">Welcome to Travel Experts</h1>
-    </div>
-    <nav>
-      <a href="index.php">
-        <div>Home</div>
-      </a>
-      <a href="contact.php">
-        <div>Contact Us</Div>
-      </a>
-      <a href="register.php">
-        <div>Registration</div>
-      </a>
-      <a id="current" href="links.php">
-        <div>Links</div>
-      </a>
-    </nav>
-  </header>
+  <!-- START OF THE HEADER-->
+		<?php
+			include('header.php');
+		 ?>
+	<!-- END OF THE HEADER-->
+  <!-- START OF THE NAVBAR-->
+  <?php
+		include('menu.php');
+	 ?>
+  <!-- END OF THE NAVBAR-->
   <main>
     <table>
-    <?php
-      for ($i=1; $i<= 6 ; $i++) {
-        print ($link_row = "<tr><td>$i</td><td><a href='page$i.php'>page$i</a></td></tr>");
+      <!-- PHP code to build a table of the links from the variables page-->
+      <?php
+      $i = 0;
+      while (list($key, $val) = each($links)) {
+        $i++;
+        print ("<tr><td>$i</td><td><a href='$key'>$val</a></td></tr>");
       }
      ?>
    </table>
   </main>
-  <footer>
-    <div class="logo">
-      <img class="logo" src="images/PirateBadge_100px.png"/>
-      <p>Copyright &copy by Travel Experts</p>
-    </div>
-  </footer>
+
+  <!-- START OF THE FOOTER -->
+  <?php
+    include('footer.php');
+   ?>
+  <!-- END OF THE FOOTER -->
+
 </body>
 </html>

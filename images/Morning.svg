@@ -7,23 +7,17 @@
 	.st1{fill:#FFDE17;stroke:#FFFFFF;stroke-miterlimit:10;}
 	.st2{fill:none;stroke:#603913;stroke-miterlimit:10;}
 </style>
-<line class="st0" x1="24" y1="24" x2="24" y2="2"/>
-<line class="st0" x1="24" y1="24" x2="20.2" y2="2.3"/>
-<line class="st0" x1="24" y1="24" x2="16.5" y2="3.3"/>
-<line class="st0" x1="24" y1="24" x2="13" y2="4.9"/>
-<line class="st0" x1="24" y1="24" x2="9.9" y2="7.1"/>
-<line class="st0" x1="24" y1="24" x2="7.1" y2="9.9"/>
-<line class="st0" x1="24" y1="24" x2="4.9" y2="13"/>
-<line class="st0" x1="24" y1="24" x2="3.3" y2="16.5"/>
-<line class="st0" x1="24" y1="24" x2="2.3" y2="20.2"/>
-<line class="st0" x1="24" y1="24" x2="45.7" y2="20.2"/>
-<line class="st0" x1="24" y1="24" x2="44.7" y2="16.5"/>
-<line class="st0" x1="24" y1="24" x2="43.1" y2="13"/>
-<line class="st0" x1="24" y1="24" x2="40.9" y2="9.9"/>
-<line class="st0" x1="24" y1="24" x2="38.1" y2="7.1"/>
-<line class="st0" x1="24" y1="24" x2="35" y2="4.9"/>
-<line class="st0" x1="24" y1="24" x2="31.5" y2="3.3"/>
-<line class="st0" x1="24" y1="24" x2="27.8" y2="2.3"/>
+<circle class="svgcontainer" cx="24" cy="24" r="22" stroke="black" stroke-width="2" fill="white" />
+<rect x="0" y="24" width="48" height="24" style="fill:black;" />
+<line class="st0" x1="24" y1="22.9" x2="24" y2="3.1"/>
+<line class="st0" x1="24" y1="22.9" x2="17.2" y2="4.3"/>
+<line class="st0" x1="24" y1="22.9" x2="11.3" y2="7.7"/>
+<line class="st0" x1="24" y1="22.9" x2="6.9" y2="13"/>
+<line class="st0" x1="24" y1="22.9" x2="4.5" y2="19.5"/>
+<line class="st0" x1="24" y1="22.9" x2="43.5" y2="19.5"/>
+<line class="st0" x1="24" y1="22.9" x2="41.1" y2="13"/>
+<line class="st0" x1="24" y1="22.9" x2="36.7" y2="7.7"/>
+<line class="st0" x1="24" y1="22.9" x2="30.8" y2="4.3"/>
 <g>
 	<path class="st1" d="M24,9C15.7,9,9,15.7,9,24h30C39,15.7,32.3,9,24,9z"/>
 </g>

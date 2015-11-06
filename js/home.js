@@ -122,7 +122,6 @@ function hidePkgDesc(sender) {
 onclick Function to open a website and close it after 3 seconds when a package div is clicked.
 */
 function launch(myUrl) {
-  alert(myUrl);
   var linkWindow = window.open(myUrl);
   linkWindow.focus();
   setTimeout(function () { linkWindow.close(); }, 3000);

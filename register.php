@@ -26,26 +26,14 @@ Methods:		 The form fields use title and pattern attributes.
 
 	</head>
 <body onload="formLoad(this)">
-	<header align="center">
-		<div id="logo-container">
-			<img class="logo" src="images/PirateBadge_100px.png" alt="logo not displayable"/>
-			<h1 class="logo">Welcome to Travel Experts</h1>
-		</div>
-		<nav>
-			<a href="index.php">
-				<div>Home</div>
-			</a>
-			<a href="contact.php">
-				<div>Contact Us</Div>
-			</a>
-			<a id="current" href="register.php">
-				<div>Registration</div>
-			</a>
-			<a href="links.php">
-				<div>Links</div>
-			</a>
-		</nav>
-	</header>
+	<!-- START OF THE HEADER-->
+		<?php
+			include('header.php');
+		 ?>
+	<!-- END OF THE HEADER-->
+	<?php
+		include('menu.php');
+	 ?>
 
 <!-- START OF THE FORM SECTION -->
 	<section id="reg-form">
@@ -177,12 +165,11 @@ Methods:		 The form fields use title and pattern attributes.
 		</form>
 		</section> <!-- END OF THE FORM SECTION -->
 
-		<footer>
-			<div class="logo">
-				<img class="logo" src="images/PirateBadge_100px.png" alt="logo not displayable"/>
-				<p>Copyright &copy; by Travel Experts</p>
-			</div>
-		</footer>
+		<!-- START OF THE FOOTER -->
+		<?php
+			include('footer.php');
+		 ?>
+		<!-- END OF THE FOOTER -->
 
 		<script type="text/javascript" src="js/form.js"></script>
 

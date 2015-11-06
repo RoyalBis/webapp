@@ -21,6 +21,7 @@ label
     margin-right: 1em;
     font-weight: 600;
     color: #404040;
+
 }
 
 /*******************************************************************************
@@ -63,6 +64,13 @@ select, textarea, input, .bumper
     flex-grow: 1;
     background-color: rgb(246, 246, 246);
     max-width: 100%;
+}
+
+/*spaces to push flex fields to one side of the window*/
+.bumper
+{
+    visibility: hidden;
+    background-color: transparent;
 }
 
 /*buttons*/
