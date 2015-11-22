@@ -6,10 +6,6 @@ Description: JavaScript for the Registration Form. Handles onfocus tooltips,
              data validation, and a Regex for Postal Code entry.
 *******************************************************************************/
 
-/*
-This function is called when the user clicks submit or reset.
-Returns: false to interrupt the actions or completes.
-*/
 function formLoad(sender) {
   var myTips = document.getElementsByClassName("inputTip")
   for (i = 0; i < myTips.length; i++) {
@@ -28,14 +24,24 @@ function hideTip(sender) {
   myTip.style.visibility = "hidden";
 }
 
+/*
+This function is called when the user clicks submit or reset.
+Returns: false to interrupt the actions or completes.
+*/
 function formConfirm(sender) {
   var type = sender.type;
   if (!confirm("Are you sure you want to " + type + " the form?")) {
     return false;
   }
-  return formValidate(sender);
+  if (sender.type == "submit") {
+    return formValidate(sender);
+  }
 }
 
+/*
+This function is called by formConfirm after the user confirms a submit, will
+check all form fields for data and style invalid fields/valid fields
+*/
 function formValidate(sender) {
   var inputs = sender.form.getElementsByTagName("INPUT");
   var selects = sender.form.getElementsByTagName("SELECT");
@@ -61,9 +67,11 @@ function formValidate(sender) {
 }
 
 /*
-function to create an array from on object that looks like an array (numbered)
-If only one item is added it will just create an array out of this object.
-Input: (Object1[element1,element2,etc] , Object2[element1,element2,etc]*optional,  etc[etc]*optional)
+Function to create an array from on object that looks like an array (numbered)
+If only one objectarray is added as a parameter it will just create an array out
+of this object.
+Input: (Object1[element1,element2,etc] , Object2[element1,element2,etc]*optional,
+       etc[etc]*optional)
 Returns: the new array
 */
 function objConcat() {
@@ -76,6 +84,10 @@ function objConcat() {
   return output;
 }
 
+/*
+This function performs the regex validation on postal codes onchange(),
+it also performs field formatting before submission
+*/
 function valPostCode(sender) {
   var canPostRe = /^([A-Z]\d[A-Z](\s|-)?\d[A-Z]\d)$/;
   var fieldValue = sender.value.toUpperCase().trim();
@@ -89,6 +101,11 @@ function valPostCode(sender) {
   sender.value = fieldValue;
 }
 
+/*
+This function performs the data validation onchange() on the birthdate fields; min max date
+I would not use a date picker in the future to set a birthdate, it is not
+convenient to change years.
+*/
 function valBDate(sender) {
   var today = new Date();
   var minDate = new Date("1900-01-01")
@@ -101,35 +118,3 @@ function valBDate(sender) {
 
   }
 }
-
-
-//Canadian Postal Code and US Zip Code
-/*
-  var fieldValue = sender.value.toUpperCase().trim();
-
-  var pattern = /^([A-Z]\d[A-Z](\s|-)?\d[A-Z]\d)$|^(\d{5})$|^((\d{5})(\s|-)(\d{4})?)$/;
-  if ( !(pattern.test(fieldValue)) ) {
-    alert(fieldValue + " is an invalid postalcode or zip code format");
-  }
-  fieldValue = fieldValue.replace(/-|\s/,"");
-  sender.value = fieldValue.substr(0, 3) + " " + fieldValue.substr(3);
-*/
-
-//Candian and American Postal Code with data sanitivation
-/*
-function valPostCode(sender) {
-  var canPostRe = /^([A-Z]\d[A-Z](\s|-)?\d[A-Z]\d)$/;
-  var usZipRe = /^((\d{5})(\s|-)(\d{4})?)$/;
-  var fieldValue = sender.value.toUpperCase().trim();
-  if ( canPostRe.test(fieldValue) ) {
-    fieldValue = fieldValue.replace(/-|\s/,"");
-    fieldValue = fieldValue.substr(0, 3) + " " + fieldValue.substr(3);
-  } else if ( usZipRe.test(fieldValue) ) {
-    fieldValue = fieldValue.replace(/\s/,"-");
-  } else {
-    alert(fieldValue + " is not a valid postalcode or zipcode");
-    return;
-  }
-  sender.value = fieldValue;
-}
-*/

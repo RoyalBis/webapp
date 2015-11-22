@@ -6,7 +6,10 @@ Description: JavaScript for the Home Page. Handles the Package object creation
              and the display the package images, descriptions, names, and
              webpage link.
 *******************************************************************************/
-
+/*
+The below arrays are temporary until data can be gathered from a database.
+The arrays make it easy to loop, modify and and new items to the packages object.
+*/
 var vacNames =  [
                   "Vacation Package #1",
                   "Vacation Package #2",
@@ -53,11 +56,23 @@ function Package(name, src, alt, desc, vacLink) {
   this.vacLink = vacLink;
 }
 
-//object show/hide code
-function loadPackages() {
+/*
+Function runs onload of the body. Loops through and creates the package objects,
+then loops throught the package objects and builds each objects HTML elements for
+the home page (index.html).
 
+*** This function will need to be updated so packages are built from a the
+    database data not the embedded arrays.
+*/
+function loadPackages() {
   for (i=0;i<vacNames.length;i++) {
-    packages.push(new Package(vacNames[i],vacSrcs[i],vacAlts[i],vacDescs[i],vacLinks[i]));
+    packages.push(new Package(
+                                vacNames[i],
+                                vacSrcs[i],
+                                vacAlts[i],
+                                vacDescs[i],
+                                vacLinks[i]
+                              ));
   }
 
   for (i=0;i<packages.length;i++) {
@@ -77,6 +92,9 @@ function loadPackages() {
   }
 }
 
+/*
+This function performs the onmouseover() effects for the vacation packages.
+*/
 function showPkgDesc(sender) {
   for (i = 0; i < sender.children.length; i++) {
     if (sender.children[i].tagName == "P") {
@@ -87,6 +105,9 @@ function showPkgDesc(sender) {
   }
 }
 
+/*
+This function performs the onmouseout() effects for the vacation packages (restore-to-default).
+*/
 function hidePkgDesc(sender) {
   for (i = 0; i < sender.children.length; i++) {
     if (sender.children[i].tagName == "P") {
@@ -97,8 +118,10 @@ function hidePkgDesc(sender) {
   }
 }
 
+/*
+onclick Function to open a website and close it after 3 seconds when a package div is clicked.
+*/
 function launch(myUrl) {
-  alert(myUrl);
   var linkWindow = window.open(myUrl);
   linkWindow.focus();
   setTimeout(function () { linkWindow.close(); }, 3000);

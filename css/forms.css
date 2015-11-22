@@ -21,8 +21,16 @@ label
     margin-right: 1em;
     font-weight: 600;
     color: #404040;
+
 }
 
+/*******************************************************************************
+.input classes are the flex containers for the form fields, perform the
+responsive stretching. Relative position is used to position the onfocus() field
+tips absolutely to them rather than the body;
+*/
+/*group containers for the other input containers, allows multiple fields of a
+particular size to be on one line or many depending on screeen size i.e. address*/
 .input-container
 {
     display: flex;
@@ -30,6 +38,7 @@ label
     position: relative;
 }
 
+/*input container for single fields i.e. email*/
 .input
 {
     margin-top: 1em;
@@ -38,6 +47,7 @@ label
     position: relative;
 }
 
+/*input container for input containers that are inside container groups i.e city */
 .inner-input
 {
     margin-top: .5em;
@@ -46,7 +56,9 @@ label
     flex-grow: 1;
     position: relative;
 }
+/******************************************************************************/
 
+/*performs the flexing for items inside flex containers*/
 select, textarea, input, .bumper
 {
     flex-grow: 1;
@@ -54,12 +66,14 @@ select, textarea, input, .bumper
     max-width: 100%;
 }
 
+/*spaces to push flex fields to one side of the window*/
 .bumper
 {
     visibility: hidden;
     background-color: transparent;
 }
 
+/*buttons*/
 #buttons > input
 {
     flex-grow: 0;
@@ -76,22 +90,15 @@ select, textarea, input, .bumper
     transition: background-color, color .1s;
 }
 
-#buttons > input:hover {
-  background-color: White;
-  color: black;
-}
+/*button hover effects*/
+#buttons > input:hover { background-color: White; color: black; }
 
-#spam {
-  justify-content: flex-end;
-}
+/*makes sure the spam field and text are positioned correctly with each other*/
+#spam { justify-content: flex-end; }
 
-[name="spam"]
-{
-    flex-grow: 0;
-    min-width: 2em;
-    margin-left: 1em;
-}
+[name="spam"] { flex-grow: 0; min-width: 2em; margin-left: 1em; }
 
+/*Radio buttons need to be positioned differently******************************/
 #gender
 {
     height: 1em;
@@ -101,28 +108,21 @@ select, textarea, input, .bumper
     margin-bottom: 2em;
 }
 
-#genders
-{
-    margin-top: 0px;
-}
+#genders { margin-top: 0px; }
 
-#genders label
-{
-    margin-right: 0px;
-    font-weight: normal;
-}
+#genders label { margin-right: 0px; font-weight: normal; }
 
-[type="radio"]
-{
-    margin-right: 2em;
-}
+[type="radio"] { margin-right: 2em; }
+/******************************************************************************/
 
+/*All fields focus effects*/
 select:focus, textarea:focus, input:focus
 {
     border-color: transparent;
     background-color: transparent;
 }
 
+/*These are the onfocus() tooltips*/
  form div > p
 {
   position: absolute;
@@ -135,6 +135,10 @@ select:focus, textarea:focus, input:focus
   padding: 1em;
 }
 
+/*
+Error messsages at the top of the page; technically not apart of the form,
+but it uses form data so...
+*/
 #errors
 {
   color: red;

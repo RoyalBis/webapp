@@ -3,8 +3,15 @@ Title: 			 Travel Experts Web App - Registration Page & Form
 Author: 		 Royal Bissell
 Date: 			 2015-11-02
 Description: Registration Page for Travel Experts. Contains a registration form
-						 and data validation. Shares Header and Footer with Contacts.html and
-						 Register.html.
+						 and data validation. Shares Header and Footer with index.php and
+						 contact.php.
+Methods:		 The form fields use title and pattern attributes.
+						 Title attributes provide a hover effect for fields, onfocus() tooltips
+						 are still neccessary; touch input devices do not hover!
+						 Pattern attributes perform a regex on input at submission and if they
+						 fail will display the message = title attribute to the user as an error
+						 message. (postal code and birthdate rely on javascript as a way of
+						 exploring different validation methods)
 ------------------------------------------------------------------------------->
 
 <!DOCTYPE html>
@@ -19,23 +26,14 @@ Description: Registration Page for Travel Experts. Contains a registration form
 
 	</head>
 <body onload="formLoad(this)">
-	<header align="center">
-		<div id="logo-container">
-			<img class="logo" src="images/PirateBadge_100px.png" alt="logo not displayable"/>
-			<h1 class="logo">Welcome to Travel Experts</h1>
-		</div>
-		<nav>
-			<a href="index.html">
-				<div>Home</div>
-			</a>
-			<a href="contact.html">
-				<div>Contact Us</Div>
-			</a>
-			<a id="current" href="register.html">
-				<div>Registration</div>
-			</a>
-		</nav>
-	</header>
+	<!-- START OF THE HEADER-->
+		<?php
+			include('header.php');
+		 ?>
+	<!-- END OF THE HEADER-->
+	<?php
+		include('menu.php');
+	 ?>
 
 <!-- START OF THE FORM SECTION -->
 	<section id="reg-form">
@@ -167,12 +165,11 @@ Description: Registration Page for Travel Experts. Contains a registration form
 		</form>
 		</section> <!-- END OF THE FORM SECTION -->
 
-		<footer>
-			<div class="logo">
-				<img class="logo" src="images/PirateBadge_100px.png" alt="logo not displayable"/>
-				<p>Copyright &copy; by Travel Experts</p>
-			</div>
-		</footer>
+		<!-- START OF THE FOOTER -->
+		<?php
+			include('footer.php');
+		 ?>
+		<!-- END OF THE FOOTER -->
 
 		<script type="text/javascript" src="js/form.js"></script>
 
