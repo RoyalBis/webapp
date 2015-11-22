@@ -5,8 +5,7 @@ PROCEDURAL FUNCTIONS
 /*-------------------------------------------------------------------------*/
     function sql_query_e($mydb,$query) {
       $result = mysqli_query($mydb, $query);
-      ($result) ? print("Insert Successful") : print("Insert Failed" . mysqli_connect_error());
-      mysqli_close($mydb);
+      return $result;
     }
 
     function sql_addrow($db_name, $table_name, $sql_row_arr) {
@@ -27,9 +26,27 @@ PROCEDURAL FUNCTIONS
       $values_str = rtrim($values_str, ",");
       $values_str .= ")";
       $insert_q .= $into_str . $values_str;
-      // sql_query_e($mydb,$insert_q); //I don't need this right now but probably later
-      //The below two lines may move to the sql_query_e function
-      sql_query_e($mydb,$insert_q);
+      $sqlResult = sql_query_e($mydb,$insert_q);
+      if ($sqlResult) {
+          $msg["type"] = 1;
+          $msg["userMsg"] = "New entry added<br/>";
+      } else {
+          $msg["type"] = 0;
+          $msg["userMsg"] = "Could not complete, contact IT<br/>";
+      }
+      return $msg;
+    }
+
+    //This function returns the field names in a database table
+    function sql_get_fields($db_name, $table_name) {
+      $mydb = sql_connect($db_name);
+      $select_q = "SELECT * FROM `$table_name` LIMIT 1";
+      $sqlResult = sql_query_e($mydb,$select_q);
+      $fieldNames = array();
+      while( $fieldInfo = mysqli_fetch_field($sqlResult) ) {
+        $fieldNames[] = $fieldInfo->name;
+      }
+      return $fieldNames;
     }
 
     function sql_connect($db_name) {

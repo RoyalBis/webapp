@@ -1,20 +1,50 @@
 <?php
-  include ("../functions.php");
-  $requestMsg = "";
-  print_r($_REQUEST);
-  if ($_REQUEST === "") {
-    $reqMsg = "Submitted was blank, all fields must be filed out.";
-    header("Location: ../agents/addagents.php");
-  } else {
-    foreach ($_REQUEST as $key => $val) {
-      if (!$val) {
-        $requestMsg .= "Please add a value for $key<br />";
-        header("Location: ../agents/addagents.php");
-      }
-    }
-  }
-  if ( isset($_REQUEST["submit"]) ) {
-    $requestMsg .= "Form Submitted!";
-    header("Location: ../agents/addagents.php?status=1");
-  }
- ?>
+  // include ("processform.php");
+  // include ("../functions.php");
+  // function addFormSubmit($myRequest) {
+  //   $msg = array();
+  //   $msg["message"] = "";
+  //   $mySqlArr = array();
+  //   print_r($myRequest);
+  //   $myFields = testInput($myRequest);
+  //
+  //   foreach ($myRequest as $key => $val) {
+  //     if (!$val) {
+  //       $msg["type"] = 0;
+  //       $msg["message"] .= "Please enter a value for $key.<br />";
+  //     } else {
+  //
+  //     }
+  //   }
+  //
+  //   if ( !($msg["type"] === 0) ) {
+  //     $msg["type"] = 1;
+  //     $msg["message"] .= "Form Submitted!";
+  //     // $sqlMsg = sql_addrow("travelexperts", "agents", $mySqlArr);
+  //   }
+  //   return $msg;
+  // }
+  //
+  // function cleanValues($data)  {
+  //     $data = trim($data);
+  //     $data = stripslashes($data);
+  //     $data = htmlspecialchars($data);
+  //     return $data;
+  // }
+  //
+  // function testInput($myRequest) {
+  //     foreach ($myRequest as $key => $val) {
+  //         switch ($key) {
+  //           case "table":
+  //             $data = cleanValues($val);
+  //             $sqlFieldTgts = sql_get_fields("travelexperts", $data);
+  //             print_r ($sqlFieldTgts);
+  //             break;
+  //           case "type":
+  //             break;
+  //           default:
+  //             break;
+  //         }
+  //     }
+  // }
+?>
